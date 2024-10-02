@@ -15,6 +15,7 @@ export default function Header() {
           <Link href={{ pathname: page.path }}>{page.name}</Link>
         </li>
       ))}
+      <br />
     </nav>
   );
 }

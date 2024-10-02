@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 export default function PetsPage() {
@@ -48,15 +46,21 @@ export default function PetsPage() {
     <div>
       {pets.map((pet) => (
         <div key={pet.id}>
-          <Link
-            href={`/pets/${pet.id}?name=${encodeURIComponent(
-              pet.name
-            )}&bio=${encodeURIComponent(pet.bio)}`}
-          >
+          <Link href={`/pets/${pet.id}?name=${pet.name}&bio=${pet.bio}`}>
             {pet.name}
           </Link>
         </div>
       ))}
     </div>
   );
+}
+
+{
+  /* <Link
+href={`/pets/${pet.id}?name=${encodeURIComponent(
+  pet.name
+)}&bio=${encodeURIComponent(pet.bio)}`}
+>
+{pet.name}
+</Link>  */
 }
